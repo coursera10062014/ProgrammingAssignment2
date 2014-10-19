@@ -24,12 +24,12 @@ makeCacheMatrix <- function(x = matrix()) {
     cacheHits <<- -1
   }
   
-  ## get returns the stored matrix
+  ## get returns the stored matrix.
   get <- function() {
     m
   }
   
-  ## setinverse stores the computed invers
+  ## setinverse stores the computed inverse.
   setinverse <- function(computedInverse) {
     if (!is.null(inverse)) {
       stop("inverse already stored.")
