@@ -1,3 +1,13 @@
+### Programming Assignment 2 for _Programming in R_
+
+In this directory, you'll find a 
+[cachematrix.R](cachematrix.R)
+implementing two methods to efficiently cache
+the calculation of a matrix inverse.
+
+The programming assignment is described below:
+
+
 ### Introduction
 
 This second programming assignment will require you to write an R
