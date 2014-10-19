@@ -50,10 +50,6 @@ makeCacheMatrix <- function(x = matrix()) {
   
   hits <- function() cacheHits  # for unit testing
   
-  # The examples provides a set method that can be used to change the
-  # (in the example case) vector that has its mean being computed.
-  # However, the problem specification for the assignment doesn't specify
-  # any set method.  Thus one is not provided here.
   list(matrix=x, setinverse=setinverse, getinverse=getinverse, hits=hits,
       set=set, get=get)
 }
