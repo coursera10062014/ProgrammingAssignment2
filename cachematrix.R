@@ -60,17 +60,15 @@ makeCacheMatrix <- function(x = matrix()) {
 ## a cached value.
 
 cacheSolve <- function(x, ...) {
-  # The example in the assignment uses environment caching to carry around the
-  # cache.  That's not necessary.  We can store it in the CacheMatrix itself.
   if (class(x) != "list") {
     stop("cacheSolve only accepts arguments created by makeCacheMatrix().")
   }
-  i <- x$getinverse()
-  if (is.null(i)) {    
-    i <- solve(x$get())
-    x$setinverse(i)
+  inverse <- x$getinverse()
+  if (is.null(inverse)) {    
+    inverse <- solve(x$get())
+    x$setinverse(inverse)
   }
-  i
+  inverse
 }
 
 ## assertMatrixEqual will stop() if got and want do not match
